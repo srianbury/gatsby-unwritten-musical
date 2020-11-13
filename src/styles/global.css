@@ -7,6 +7,10 @@ html {
     background-color: #000000;
 }
 
+a {
+    color: #ffc107;
+}
+
 .friday {
     font-family: 'friday13';
     font-size: 150%;
