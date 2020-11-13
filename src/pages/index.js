@@ -8,7 +8,9 @@ const Home = ({ data, location }) => {
   return (
     <Layout title="Home" location={location}>
       <div className="row mb-3">
-        <div className="col-12">{info.about.about}</div>
+        <div className="col-12 col-md-6 offset-0 offset-md-3">
+          {info.about.about}
+        </div>
       </div>
       <div className="row">
         <div className="col-12 col-md-6 offset-0 offset-md-3">

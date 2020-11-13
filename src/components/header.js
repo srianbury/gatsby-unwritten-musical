@@ -22,8 +22,8 @@ const Header = ({ siteTitle, currentPathname }) => (
       <Nav className="mr-auto" />
       <Nav>
         <NavItem to="/" title="Home" currentPathname={currentPathname} />
-        <NavItem to="/cast" title="Cast" currentPathname={currentPathname} />
-        <NavItem to="/shows" title="Shows" currentPathname={currentPathname} />
+        <NavItem to="/cast/" title="Cast" currentPathname={currentPathname} />
+        <NavItem to="/shows/" title="Shows" currentPathname={currentPathname} />
       </Nav>
     </Navbar.Collapse>
   </Navbar>
