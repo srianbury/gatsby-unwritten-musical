@@ -64,7 +64,7 @@ export const query = graphql`
       edges {
         node {
           id
-          startDateAndTime(formatString: "dddd MMM. DD, YYYY")
+          startDateAndTime(formatString: "dddd MMM. Do, YYYY @ h:mm a")
           approximateDuration
           location {
             lat
