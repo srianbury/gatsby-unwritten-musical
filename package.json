@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "srianbury",
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^14.1.2",
+    "@contentful/rich-text-types": "^14.1.2",
     "bootstrap": "^4.5.3",
     "gatsby": "^2.24.67",
     "gatsby-image": "^2.4.21",

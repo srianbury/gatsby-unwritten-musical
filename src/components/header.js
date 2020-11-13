@@ -16,8 +16,8 @@ const Header = ({ siteTitle }) => (
       <Nav className="mr-auto" />
       <Nav>
         <NavItem to="/" title="Home" />
-        <NavItem to="/about" title="About" />
-        <NavItem to="/contact" title="Contact" />
+        <NavItem to="/cast" title="Cast" />
+        <NavItem to="/shows" title="Shows" />
       </Nav>
     </Navbar.Collapse>
   </Navbar>
