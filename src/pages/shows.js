@@ -2,11 +2,11 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 
-const Shows = ({ data }) => (
-  <Layout title="Shows">
+const Shows = ({ data, location }) => (
+  <Layout title="Shows" location={location}>
     <div className="row">
       {data.allContentfulShow.edges.map(({ node }) => (
-        <div className="col-12">
+        <div className="col-12" key={node.id}>
           <div>
             <div>{node.cancelled ? <CancelledNotification /> : null}</div>
             <div>
@@ -39,7 +39,7 @@ const Shows = ({ data }) => (
                 </div>
               </div>
             )}
-            <hr />
+            <hr style={{ border: "1px solid #f8f9fa" }} />
           </div>
         </div>
       ))}
@@ -63,6 +63,7 @@ export const query = graphql`
     allContentfulShow(sort: { fields: [startDateAndTime], order: ASC }) {
       edges {
         node {
+          id
           startDateAndTime(formatString: "dddd MMM. DD, YYYY")
           approximateDuration
           location {

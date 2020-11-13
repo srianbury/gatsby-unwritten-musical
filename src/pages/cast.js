@@ -3,22 +3,28 @@ import { graphql } from "gatsby";
 import GtsbImg from "gatsby-image";
 import Layout from "../components/layout";
 
-const Cast = ({ data }) => (
-  <Layout title="Cast">
+const Cast = ({ data, location }) => (
+  <Layout title="Cast" location={location}>
     <div className="row">
       {data.allContentfulCastMember.edges.map(({ node }) => (
-        <div className="col-12 col-sm-6 col-md-4 pb-3">
+        <div className="col-12 col-sm-6 col-md-4 pb-3" key={node.id}>
           <div>
             <GtsbImg className="border" alt="" fluid={node.picture.fluid} />
-            <div>
-              Name: <h5 className="d-inline">{node.name}</h5>
-            </div>
-            <div>About: {node.about.about}</div>
-            <div>
-              <a href={`https://www.instagram.com/${node.instagramHandle}/`}>
-                <i class="fab fa-instagram pr-1" />
-                {node.instagramHandle}
-              </a>{" "}
+            <div className="mt-1">
+              <div>
+                <h5 className="d-inline friday">{node.name}</h5>
+              </div>
+              <div>{node.about.about}</div>
+              <div>
+                <a
+                  href={`https://www.instagram.com/${node.instagramHandle}/`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="fab fa-instagram pr-1" />
+                  {node.instagramHandle}
+                </a>{" "}
+              </div>
             </div>
           </div>
         </div>
@@ -33,6 +39,7 @@ export const query = graphql`
     allContentfulCastMember {
       edges {
         node {
+          id
           name
           about {
             about

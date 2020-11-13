@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'friday13';
+    src: url('./fonts/Friday13v12.ttf')
+}
+
+html {
+    background-color: #000000;
+}
+
+.friday {
+    font-family: 'friday13';
+    font-size: 150%;
+}
+
+.bg-dark {
+    background-color: #000000 !important;
+  }
+  
+  a.bg-dark:hover, a.bg-dark:focus,
+  button.bg-dark:hover,
+  button.bg-dark:focus {
+    background-color: #1d2124 !important;
+  }

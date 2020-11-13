@@ -6,7 +6,7 @@ import SEO from "./seo";
 import { getSiteText } from "../utils/getSiteText";
 import * as CONSTANTS from "../constants";
 
-const Layout = ({ title, children }) => {
+const Layout = ({ title, location, children }) => {
   const data = useStaticQuery(graphql`
     query {
       allContentfulSiteText(limit: 1) {
@@ -21,11 +21,14 @@ const Layout = ({ title, children }) => {
   `);
 
   return (
-    <>
+    <div className="bg-dark text-light">
       <SEO title={title} />
-      <Header siteTitle={getSiteText(data, CONSTANTS.SITE_TEXT.TITLE)} />
+      <Header
+        siteTitle={getSiteText(data, CONSTANTS.SITE_TEXT.TITLE)}
+        currentPathname={location.pathname}
+      />
       <main className="container mt-2 mb-4">{children}</main>
-    </>
+    </div>
   );
 };
 

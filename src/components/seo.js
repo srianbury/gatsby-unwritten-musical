@@ -80,6 +80,11 @@ const SEO = ({ description, lang, meta, title }) => {
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
         crossorigin="anonymous"
       ></link>
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@700&display=swap"
+        rel="stylesheet"
+      ></link>
     </Helmet>
   );
 };
